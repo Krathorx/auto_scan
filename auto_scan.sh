@@ -27,10 +27,10 @@ else
     echo ""
 fi
 
-## Dar la ip de la máquina víctima
+# Dar la ip de la máquina víctima
 read -p "Dame la IP del equipo a escanear: " ip
 
-## Opciones a elegir
+# Opciones a elegir
 
 while true; do
     echo -e "\n${greenColour}1) Escaneo básico${endColour}"
@@ -41,7 +41,7 @@ while true; do
     read -p "Selecciona el escaneo deseado: " escaneo
 
 case $escaneo in 
-
+# Tipos de escaneo con nmap
 1) clear && echo -e "${yellowColour}Escaneando la IP --> ${endColour}${turquoiseColour}$ip${endColour}" && nmap -p- --open $ip > escaneo_básico.txt && echo -e "\n${blueColour}Reporte guardado en el archivo${endColour} ${yellowColour}escaneo_básico.txt${endColour}"
 exit
 ;;
